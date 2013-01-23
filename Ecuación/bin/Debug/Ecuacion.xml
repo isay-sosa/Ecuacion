@@ -1,0 +1,54 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Ecuacion
+</name>
+</assembly>
+<members>
+<member name="P:Ecuacion.My.Resources.Resources.ResourceManager">
+	<summary>
+  Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
+</summary>
+</member><member name="P:Ecuacion.My.Resources.Resources.Culture">
+	<summary>
+  Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
+  búsquedas de recursos mediante esta clase de recurso con establecimiento inflexible de tipos.
+</summary>
+</member><member name="T:Ecuacion.My.Resources.Resources">
+	<summary>
+  Clase de recurso con establecimiento inflexible de tipos, para buscar cadenas traducidas, etc.
+</summary>
+</member><member name="M:Ecuacion.Arbol.setLista(System.String)">
+	<summary>
+ Regresa una lista de nodos a partir de una cadena
+ </summary>
+	<param name="Ecuacion">Ecuación de tipo string, la cual se convertirá en una lista de nodos</param>
+	<returns>Regresa una lista de nodos ya acomodados a partir de una ecuación</returns>
+	<remarks></remarks>
+</member><member name="M:Ecuacion.Arbol.makeArbol(Ecuacion.Nodo,System.Byte)">
+	<summary>
+ Proceso que se repite dentro de la función "setArbol" el cual crea los hijos del operador y elimina y modifica las referencias de los nodos
+ </summary>
+	<param name="raiz">Es el nodo en el que tratará de generar los hijos, dependiendo del nivel en el que este</param>
+	<param name="nivel">El nivel 1 busca parentesis, el nivel 2 busca multiplicaciones y divisiones, y el nivel 3 busca sumas y restas</param>
+	<remarks></remarks>
+</member><member name="M:Ecuacion.Arbol.setArbol(Ecuacion.Nodo,System.Byte,System.Boolean)">
+	<summary>
+ Función que genera un árbol de una ecuación a partir de una lista de nodos
+ </summary>
+	<param name="raiz">Lista de nodos, con la cual se generará el árbol</param>
+	<param name="nivel">El nivel 1 busca parentesis, el nivel 2 busca multiplicaciones y divisiones, y el nivel 3 busca sumas y restas</param>
+	<param name="entrar">Si existen parentesis anidados dentro de la lista, la variable cambia a "True" para indicar que entro a parentesis anidados</param>
+	<returns>Regresa un nodo, el cual tendrá la configuración de todo el árbol (regresa la raíz del árbol)</returns>
+	<remarks></remarks>
+</member><member name="M:Ecuacion.Arbol.solveEq(System.Byte)">
+	<summary>
+ Función que resuelve la ecuación una vez que el árbol se ha configurado
+ </summary>
+	<param name="metodo">Con 1 se realizará el método en base al PreOrder, mientras que con el 2 resuelve el árbol mediante el método basado en PostOrder</param>
+	<returns>Regresa el resultado del árbol de ecuación en una cadena</returns>
+	<remarks></remarks>
+</member>
+</members>
+</doc>
